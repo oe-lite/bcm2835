@@ -1,0 +1,7 @@
+
+PROVIDES_${PN} = "vc-graphics"
+COMPATIBLE_MACHINES="rpi-softfp"
+VCDIR = "opt/vc"
+require vc-graphics.inc
+
+
