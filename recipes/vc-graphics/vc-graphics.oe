@@ -1,5 +1,4 @@
 
-PROVIDES_${PN} = "vc-graphics"
 COMPATIBLE_MACHINES="rpi"
 COMPATIBLE_IF_FLAGS="softfp"
 VCDIR = "opt/vc"

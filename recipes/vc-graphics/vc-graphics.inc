@@ -11,7 +11,9 @@ SRC_URI = "git://github.com/raspberrypi/firmware.git;protocol=git;${SRC_REV}\
 
 S = "${SRCDIR}/firmware/${VCDIR}"
 
-inherit pkgconfig sysvinit hardsoftfp
+inherit library pkgconfig sysvinit
+
+RECIPE_FLAGS = "hardfp softfp"
 
 do_install () {
   install -d ${D}${bindir}
