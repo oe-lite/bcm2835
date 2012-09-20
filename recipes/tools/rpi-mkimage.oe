@@ -1,0 +1,12 @@
+SRC_URI = "git://github.com/raspberrypi/tools.git;protocol=git;branch=master"
+
+RECIPE_TYPES = "native"
+
+S = "${SRCDIR}/tools/"
+
+do_install() {
+  install -d ${D}/usr/bin/mkimage
+  cp ${S}/mkimage/* ${D}/usr/bin/mkimage/.
+}
+
+FILES_${PN} = "/*"
