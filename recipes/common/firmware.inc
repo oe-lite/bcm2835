@@ -1,7 +1,7 @@
 
 # 22/08/2012 firmware; this can be overridden from distro config
-RPIFW_SRCREV ?= "commit=c42f21261f1eeae0df7ad02f34773e279e7af8c5"
-RPIFW_DATE ?= "20120822"
+RPIFW_SRCREV ?= "branch=master"
+RPIFW_DATE ?= "head"
 
 
 SRC_REV = "${RPIFW_SRCREV}"

@@ -1,7 +1,7 @@
 
-COMPATIBLE_MACHINES = "rpi"
-COMPATIBLE_IF_FLAGS = "hardfp"
-VCDIR = "hardfp/opt/vc"
 require vc-graphics.inc
+COMPATIBLE_MACHINES = "rpi"
+#COMPATIBLE_IF_FLAGS = "hardfp"
+VCDIR = "hardfp/opt/vc"
 
 
