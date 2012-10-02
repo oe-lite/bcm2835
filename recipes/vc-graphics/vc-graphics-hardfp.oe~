@@ -1,7 +1,0 @@
-
-PROVIDES_${PN} = "vc-graphics"
-
-VCDIR = "hardfp/opt/vc"
-require vc-graphics.inc
-
-

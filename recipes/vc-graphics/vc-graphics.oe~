@@ -1,7 +1,0 @@
-
-PROVIDES_${PN} = "vc-graphics"
-
-VCDIR = "opt/vc"
-require vc-graphics.inc
-
-
