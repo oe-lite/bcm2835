@@ -17,8 +17,7 @@ do_install() {
   install -m 0644 bootcode.bin ${D}/.
   install -m 0644 COPYING.linux ${D}/.
   install -m 0644 LICENCE.broadcom ${D}/.
-  install -m 0644 loader.bin ${D}/. 
-  install -m 0644 ${RPI_GPU_FIRMWARE}_start.elf ${D}/start.elf
+  install -m 0644 start.elf ${D}/start.elf
   echo "${RPI_CMDLINE}" > ${D}/cmdline.txt
   touch ${D}/${PN}-${PV}.stamp
 }
