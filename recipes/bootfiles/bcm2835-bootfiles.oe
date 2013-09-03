@@ -8,8 +8,7 @@ SRC_URI = " \
 "
 
 #can be overridden in any distro conf or machine conf
-RPI_CMDLINE ?= "dwc_otg.speed=0 dwc_otg.lpm_enable=0 root=/dev/mmcblk0p2 rootwait rootfstype=ext4 init=/sbin/init console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1"
-RPI_GPU_FIRMWARE ?= "arm224"
+CMDLINE ?= "dwc_otg.speed=0 dwc_otg.lpm_enable=0 root=/dev/mmcblk0p2 rootwait rootfstype=ext4 init=/sbin/init console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1"
 
 S = "${SRCDIR}/firmware/boot"
 
@@ -18,8 +17,13 @@ do_install() {
   install -m 0644 COPYING.linux ${D}/.
   install -m 0644 LICENCE.broadcom ${D}/.
   install -m 0644 start.elf ${D}/start.elf
-  echo "${RPI_CMDLINE}" > ${D}/cmdline.txt
+  echo "${CMDLINE}" > ${D}/cmdline.txt
+  echo "" > ${D}/config.txt
   touch ${D}/${PN}-${PV}.stamp
 }
 
 FILES_${PN} = "/*.*"
+
+PACKAGES =+ "bcm2835-config"
+FILES_${PN}-bcm2835-config = "/config.txt"
+PROVIDES_${PN}-bcm2835-config = "bcm-config"
