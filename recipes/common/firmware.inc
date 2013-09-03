@@ -1,8 +1,8 @@
 
 # 22/08/2012 firmware; this can be overridden from distro config
-RPIFW_SRCREV ?= "branch=master"
-RPIFW_DATE ?= "head"
+FW_SRCREV ?= "branch=master"
+FW_DATE ?= "head"
 
 
-SRC_REV = "${RPIFW_SRCREV}"
-PV = "${RPIFW_DATE}"
+SRC_REV = "${FW_SRCREV}"
+PV = "${FW_DATE}"
