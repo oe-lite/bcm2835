@@ -1,7 +1,7 @@
 DESCRIPTION = "Graphics libraries for BCM2835."
 LICENSE = "Proprietary"
 
-PROVIDES_${PN} = "libgl libgles2 libegl"
+PROVIDES_${PN} = "libgles2 libegl"
 
 include ../common/firmware.inc
 
