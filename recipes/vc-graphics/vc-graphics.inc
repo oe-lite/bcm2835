@@ -13,7 +13,7 @@ S = "${SRCDIR}/firmware/${VCDIR}"
 
 inherit library pkgconfig sysvinit
 
-RECIPE_FLAGS = "hardfp softfp"
+RECIPE_FLAGS += "hardfp softfp"
 
 do_install () {
   install -d ${D}${bindir}
@@ -37,7 +37,7 @@ do_install () {
 # These are proprietary binaries generated elsewhere so don't check ldflags
 INSANE_SKIP_${PN} = "ldflags"
 
-RECIPE_FLAGS = "vc_graphics_sysvinit_start"
+RECIPE_FLAGS += "vc_graphics_sysvinit_start"
 DEFAULT_USE_vc_graphics_sysvinit_start = "03"
 
 FILES_${PN} = "${bindir}/* \
